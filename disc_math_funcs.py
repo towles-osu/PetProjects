@@ -8,5 +8,9 @@ def permut(n, k):
   return answer
   
 def combin(n, k):
-  answer = factorial(n) / (factorial(n-k) * factorial(k))
+  answer = 1
+  for i in range(n, k, -1):
+    answer = answer * i
+  for i_2 in range(k,0,-1):
+    answer = answer / i_2
   return answer
